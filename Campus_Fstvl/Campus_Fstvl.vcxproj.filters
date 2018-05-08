@@ -194,6 +194,7 @@
     <None Include="App\engine\soundfont\GMGSx.sf2.zst">
       <Filter>Resource Files\engine\soundfont</Filter>
     </None>
+    <None Include="..\.gitignore" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="App\example\test.txt">

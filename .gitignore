@@ -259,3 +259,8 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+# Siv3D Ignore settings
+./Intermediate
+./Campus_Fstvl/App/engine
+./Campus_Fstvl/App/example
