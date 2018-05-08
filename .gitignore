@@ -262,5 +262,4 @@ __pycache__/
 
 # Siv3D Ignore settings
 /Intermediate
-/Campus_Fstvl/App/engine
-/Campus_Fstvl/App/example
+/Campus_Fstvl/App
