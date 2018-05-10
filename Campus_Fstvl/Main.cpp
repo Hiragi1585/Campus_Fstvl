@@ -8,49 +8,72 @@
 //////////////////////////////////////////////
 
 #include <Siv3D.hpp> // OpenSiv3D v0.2.5
+#include <HamFramework.hpp>
 #include "Define.h"
-#include "BaseScene.h"
-#include "Title.h"
-#include "Game.h"
-#include "Result.h"
-#include "Credit.h"
 
+
+struct SharedData {
+	int state;
+	bool flag;
+};
+
+using MyGame = SceneManager<String, SharedData>;
+
+class Title : public MyGame::Scene {
+public:
+	Title(const InitData& init) : IScene(init) {
+
+	}
+
+	void update() override {
+
+	}
+
+	void draw() const override {
+
+	}
+};
+
+class Game : public MyGame::Scene {
+public:
+	Game(const InitData& init) : IScene(init) {
+
+	}
+
+	void update() override {
+
+	}
+
+	void draw() const override {
+
+	}
+};
+
+class Credit : public MyGame::Scene {
+public:
+	Credit(const InitData& init) : IScene(init) {
+
+	}
+
+	void update() override {
+
+	}
+
+	void draw() const override {
+
+	}
+};
 
 void Main()
 {
 		//System Initialize
 	Window::Resize(WIDTH, HEIGHT);
 	Graphics::SetTargetFrameRateHz(REFRESHRATE);
-		//Scene Initialize
-	int scene = eScene::TITLE;
 
-	BaseScene* title,game,result,credit;
-
-	title = new Title();
-
-
-	title->init();
+	MyGame manager;
 
 	while (System::Update())
 	{
-		switch (scene) {
-
-			case eScene::TITLE: {
-				title->all();
-				break;
-			}
-
-			case eScene::GAME: {
-				break;
-			}
-
-			case eScene::RESULT: {
-				break;
-			}
-
-			case eScene::CREDIT: {
-				break;
-			}
-		}
+		manager.update();
 	}
 }

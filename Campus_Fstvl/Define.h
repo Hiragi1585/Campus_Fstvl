@@ -4,10 +4,3 @@
 #define HEIGHT 720
 
 #define REFRESHRATE 60
-
-enum eScene {
-	TITLE,
-	GAME,
-	RESULT,
-	CREDIT,
-};
